@@ -44,6 +44,9 @@ module OmniAuth
       
 
       def callback_phase
+        Rails.logger.debug ">>>>>>>>>>>>>>>>>>>>>  #{request.inspect}"
+        Rails.logger.debug ">>>>>>>>>>>>>>>>>>>>>>> #{request.params.inspect}"
+        Rails.logger.debug ">>>>>>>>>>>>>>>>>>>>>> #{session['omniauth'].inspect}"
         request.params['state'] = session['omniauth.state']
         super
       end
