@@ -7,7 +7,7 @@ module OmniAuth
       option :name, 'box'
       
       option :client_options, {
-        :site => 'https://api.box.com',
+        :site => 'https://app.box.com',
         :authorize_url => 'https://app.box.com/api/oauth2/authorize',
         :token_url     => 'https://app.box.com/api/oauth2/token'
       }
